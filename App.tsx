@@ -1,14 +1,23 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import TestScreen from "./src/screens/test-screen/TestScreen";
+import "./src/i18n";
+import I18n from "i18n-js";
 
 export default function App() {
   //add develop branch
   return (
     <View style={styles.container}>
       <TestScreen prop5={true} />
-      {/* <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" /> */}
+      <Text>{I18n.t("test.hello")}</Text>
+      <Text>{I18n.t("test2")}</Text>
+      <Button
+        title="Change language"
+        onPress={() => {
+          I18n.locale = "es";
+        }}
+      />
+      <StatusBar style="auto" />
     </View>
   );
 }
