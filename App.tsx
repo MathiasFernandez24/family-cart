@@ -1,14 +1,15 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import "./src/i18n";
 import TestScreen from "./src/screens/test-screen/TestScreen";
+import LanguageScreen from "./src/screens/language-screen/LanguageScreen";
 
 export default function App() {
-  //add develop branch
   return (
     <View style={styles.container}>
+      <StatusBar style="auto" />
       <TestScreen prop5={true} />
-      {/* <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" /> */}
+      <LanguageScreen />
     </View>
   );
 }
