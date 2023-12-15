@@ -2,6 +2,8 @@ import i18n from "i18n-js";
 import fr from "./French.json";
 import en from "./English.json";
 import es from "./Spanish.json";
+import { useSelector } from "react-redux";
+import { selectCounter } from "../store/slices/exampleCounterSlice";
 
 i18n.fallbacks = true;
 i18n.translations = { en, fr, es };
@@ -16,8 +18,13 @@ type RecursiveKeyOf<TObj extends Record<string, any>> = {
     ? `${TKey}` | `${TKey}.${RecursiveKeyOf<TObj[TKey]>}`
     : `${TKey}`;
 }[keyof TObj & string];
-
 //translate function
 export function i18nTranslate(key: TxKeyPath, options?: i18n.TranslateOptions) {
   return key ? i18n.t(key, options) : null;
 }
+
+export const enabledLanguages = {
+  english: { key: "en", value: "English" },
+  spanish: { key: "es", value: "Spanish" },
+  french: { key: "fr", value: "French" },
+};

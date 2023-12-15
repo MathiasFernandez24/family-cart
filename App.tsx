@@ -1,42 +1,15 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet } from "react-native";
+import { Provider } from "react-redux";
 import "./src/i18n";
-import TestScreen from "./src/screens/test-screen/TestScreen";
-import LanguageScreen from "./src/screens/language-screen/LanguageScreen";
-import { i18nTranslate } from "./src/i18n";
-import ButtonComponent from "./src/components/ButtonComponent";
+import Navigation from "./src/navigattion/Navigation";
+import { store } from "./src/store";
 
 export default function App() {
-
-  const handlePress = () => {
-      console.log("boton presionado");
-      
-  }
-
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <TestScreen prop5={true} />
-      <LanguageScreen />
-      <Text>{i18nTranslate("common.accept")}</Text>
-      
-    </View>
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  buttonContainer: {
-    borderWidth: 2,
-    borderColor: "red"
-  },
-  buttonText: {
-    fontSize: 25
-  },
-
-});
+const styles = StyleSheet.create({});
