@@ -1,6 +1,5 @@
 {
     "test": {
        "hello":"Hello"
-    },
-    "test2":"HELLO 2"
+    }
 }
