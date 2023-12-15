@@ -2,5 +2,12 @@
     "test": {
        "hello":"Hello"
     },
-    "test2":"HELLO 2"
+    "test2":"HELLO 2",
+    "common": {
+        "accept": "Accept",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "exit": "Exit",
+        "ok": "Ok"
+    }
 }

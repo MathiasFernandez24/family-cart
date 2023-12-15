@@ -1,5 +1,12 @@
 {
     "test": {
        "hello":"Salut"
-        }
+        },
+    "common": {
+        "accept": "Accepter",
+        "cancel": "Annuler",
+        "confirm": "Confirmer",
+        "exit": "Sortir",
+        "ok": "D'accord"
+    }
 }
