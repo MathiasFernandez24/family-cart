@@ -4,14 +4,10 @@ import "./src/i18n";
 import TestScreen from "./src/screens/test-screen/TestScreen";
 import LanguageScreen from "./src/screens/language-screen/LanguageScreen";
 import { i18nTranslate } from "./src/i18n";
-import ButtonComponent from "./src/components/ButtonComponent";
+
 
 export default function App() {
 
-  const handlePress = () => {
-      console.log("boton presionado");
-      
-  }
 
   return (
     <View style={styles.container}>
@@ -31,12 +27,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  buttonContainer: {
-    borderWidth: 2,
-    borderColor: "red"
-  },
-  buttonText: {
-    fontSize: 25
-  },
+  
+
 
 });
