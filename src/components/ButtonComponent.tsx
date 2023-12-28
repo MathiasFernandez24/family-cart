@@ -27,7 +27,6 @@ export default ButtonComponent
 
 const styles = StyleSheet.create({
     buttonContainer: {
-        margin: 10,
         // backgroundColor: "yellow"
     },
     buttonText: {
