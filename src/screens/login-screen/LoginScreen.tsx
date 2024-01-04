@@ -1,16 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import ButtonComponent from '../../components/ButtonComponent'
+import { i18nTranslate } from '../../i18n'
 
 const LoginScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>Welcome</Text>
+        <Text style={styles.title}>{i18nTranslate("login.welcome")}</Text>
       </View>
       <View style={styles.buttonContainer}>
         <ButtonComponent 
-            title={"Sign In"} 
+            title={i18nTranslate("login.sign-in")} 
             onPress={()=>{}}
             containerStyle={{
               borderWidth: 1,
@@ -24,7 +25,7 @@ const LoginScreen = () => {
             }}  
         />
         <ButtonComponent 
-            title={"Sign Up"} 
+            title={i18nTranslate("login.sign-up")} 
             onPress={()=>{}}
             containerStyle={{
               borderWidth: 1,

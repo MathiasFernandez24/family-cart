@@ -16,10 +16,10 @@ const Navigation = () => {
 
   return (
     <View style={styles.container}>
-      {/* <LanguageScreen />
+      <LanguageScreen />
       <ExampleReduxScreen />
       <Text>{i18nTranslate("test.hello")}</Text>
-      <Text>{language}</Text> */}
+      <Text>{language}</Text>
       {/* <LoginScreen/> */}
       {/* <SignInScreen/> */}
       <SignUpScreen/>

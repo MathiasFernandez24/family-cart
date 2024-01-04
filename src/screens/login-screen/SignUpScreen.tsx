@@ -2,17 +2,18 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import ButtonComponent from '../../components/ButtonComponent'
 import SearchComponent from '../../components/SearchComponent'
+import { i18nTranslate } from '../../i18n'
 
 const SignUpScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>Create Account</Text>
+        <Text style={styles.title}>{i18nTranslate("login.create")}</Text>
       </View>
       <View style={styles.inputContainer}>
         <SearchComponent
             onChange={()=>{}}
-            placeholder='Name'
+            placeholder={i18nTranslate("login.name")}
             value=''
             containerStyle={{
                 width: "100%"
@@ -25,7 +26,7 @@ const SignUpScreen = () => {
         />
         <SearchComponent
             onChange={()=>{}}
-            placeholder='Email'
+            placeholder={i18nTranslate("login.email")}
             value=''
             containerStyle={{
                 width: "100%"
@@ -38,7 +39,7 @@ const SignUpScreen = () => {
         />
         <SearchComponent
             onChange={()=>{}}
-            placeholder='Password'
+            placeholder={i18nTranslate("login.password")}
             value=''
             containerStyle={{
                 width: "100%"
@@ -52,7 +53,7 @@ const SignUpScreen = () => {
       </View>
       <View style={styles.buttonContainer}>
         <ButtonComponent 
-            title={"Sign Up"} 
+            title={i18nTranslate("login.sign-up")} 
             onPress={()=>{}}
             containerStyle={{
               borderRadius: 8,
@@ -66,11 +67,11 @@ const SignUpScreen = () => {
         />
         <View style={styles.orContainer}>
             <View style={styles.line}/>
-            <Text style={styles.orText}>or</Text>
+            <Text style={styles.orText}>{i18nTranslate("login.or")}</Text>
             <View style={styles.line}/>
         </View>
         <ButtonComponent 
-            title={"Sign In"} 
+            title={i18nTranslate("login.sign-in")} 
             onPress={()=>{}}
             containerStyle={{
               borderRadius: 8,
